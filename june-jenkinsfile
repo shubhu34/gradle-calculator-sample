@@ -8,10 +8,10 @@ stages
    
    stage ('assemble && build the code')
    { steps { withGradle {
-   sh './gradlew clean
-       ./gradlew assemble
-       ./gradlew build
-        ./ gradlew jar'}}}
+   sh './gradlew clean'
+   sh './gradlew assemble'
+   sh './gradlew build'
+   sh './ gradlew jar'}}}
    
    
    }
