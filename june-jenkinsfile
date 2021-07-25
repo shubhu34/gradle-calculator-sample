@@ -6,6 +6,13 @@ stages
    stage('scm checkout')
    { steps {  git branch: 'master', url: 'https://github.com/prakashk0301/gradle-calculator'  }  }
    
+   stage ('assemble && build the code')
+   { steps { withGradle {
+   sh './gradlew clean
+       ./gradlew assemble
+       ./gradlew build
+        ./ gradlew jar'}}}
+   
    
    }
    }
